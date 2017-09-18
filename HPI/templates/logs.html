@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+table, td, th {
+    border: 1px solid black;
+}
+table{
+width: 80%;
+border-collapse: collapse;
+}
+th {
+    height: 50px;
+}
+td {
+    height: 30px;
+}
+</style>
+<div id="logs_chart"></div>
+<div>
+    <p>Log table no. of records : {{ total_logs }}</p>
+</div>
+<div>
+    <table align="center">
+        <caption>Parsing Logs</caption>
+        <br>
+        <thead>
+            <th >Id</th>
+            <th>Filename</th>
+            <th>File Create Date</th>
+            <th>Parsing Success</th>
+            <th>Parsing Message</th>
+        </thead>
+        {% for lg in logs_data%}
+            <tr>
+                <td>{{ lg.id }}</td>
+                <td>{{ lg.filename }}</td>
+                <td>{{ lg.file_created_date }}</td>
+                <td>{{ lg.parse_success }}</td>
+                <td>{{ lg.parse_message }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

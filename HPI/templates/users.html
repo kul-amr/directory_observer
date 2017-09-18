@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+table, td, th {
+    border: 1px solid black;
+}
+table{
+width: 70%;
+border-collapse: collapse;
+}
+th {
+    height: 50px;
+}
+td {
+    height: 30px;
+}
+</style>
+<div id="users_chart"></div>
+<div>
+    <p>Total users in system: {{ total_users }}</p>
+</div>
+<div>
+    <table align="center">
+        <caption>Users Data</caption>
+        <br>
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Created Date</th>
+        </thead>
+        {% for ur in users_data%}
+            <tr>
+                <td>{{ ur.id }}</td>
+                <td>{{ ur.name }}</td>
+                <td>{{ ur.email }}</td>
+                <td>{{ ur.created_date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

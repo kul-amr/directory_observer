@@ -2,7 +2,7 @@ A working project..
 
 Description:
 
-	Aim of this project is to monitor a directory on the file system for appearance of any file.
+	The aim of this project is to monitor a directory on the file system for appearance of any file.
 	When a file appears, it parses the file and stores the file data and success/failure outcome in sqlite db tables.
 	This file observer can run all the time unsupervised, gracefully handling exceptions.
 	This is capable of multi-threading if multiple files appear at the same time with a way to control the maximum number of threads that can run.

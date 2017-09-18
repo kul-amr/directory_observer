@@ -1,3 +1,8 @@
+Task:
+	Monitor a directory on the file system for the appearance of any file.
+	When a file appears, parse the file. Log/store the file data and success/failure outcome.
+	This file observer should run all the time unsupervised, gracefully handling exceptions.
+	This should be capable of multi-threading if multiple files appear at the same time with a way to control the maximum number of threads that can run.
 
 Assumptions: 
 	1. File types - 
